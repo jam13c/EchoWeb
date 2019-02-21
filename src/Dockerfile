@@ -5,10 +5,10 @@ EXPOSE 443
 
 FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src
-COPY ["EchoWeb/EchoWeb.csproj", "EchoWeb/"]
+COPY ["EchoWeb.csproj", "EchoWeb/"]
 RUN dotnet restore "EchoWeb/EchoWeb.csproj"
+WORKDIR "/src/EchoWeb/"
 COPY . .
-WORKDIR "/src/EchoWeb"
 RUN dotnet build "EchoWeb.csproj" -c Release -o /app
 
 FROM build AS publish
