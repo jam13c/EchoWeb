@@ -27,10 +27,15 @@ namespace EchoWeb
 
             app.Run(async (context) =>
             {
-                var text = context.Request.Query["text"][0] ?? "Hello World!";
-                var envPodId = Environment.GetEnvironmentVariable("PodId") ?? "Unknown Pod";
-                await context.Response.WriteAsync($"{envPodId} says \"{text}\"");
+                var text = context.Request.Query["text"].Any() ? context.Request.Query["text"][0] : "Hello World!";
+                await context.Response.WriteAsync($"{GetIdentifier()} says \"{text}\"");
             });
+        }
+
+        public static string GetIdentifier()
+        {
+            var podId = Environment.GetEnvironmentVariable("PodId");
+            return String.IsNullOrEmpty(podId) ? "Application" : $"Pod {podId}";
         }
     }
 }
