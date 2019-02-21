@@ -5,12 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace EchoWeb
 {
     public class Startup
     {
+       
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
@@ -32,10 +35,10 @@ namespace EchoWeb
             });
         }
 
-        public static string GetIdentifier()
+        public string GetIdentifier()
         {
-            var podId = Environment.GetEnvironmentVariable("PodId");
-            return String.IsNullOrEmpty(podId) ? "Application" : $"Pod {podId}";
+            var podId = Environment.GetEnvironmentVariable("POD_ID");
+            return String.IsNullOrEmpty(podId) ? "Application" : $"Pod \"{podId}\"";
         }
     }
 }
