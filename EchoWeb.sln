@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EchoWeb", "EchoWeb\EchoWeb.csproj", "{8D504D33-61C4-4DFD-B480-3D33828FBAEC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EchoWeb", "src\EchoWeb.csproj", "{8D504D33-61C4-4DFD-B480-3D33828FBAEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
