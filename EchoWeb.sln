@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EchoWeb", "src\EchoWeb.csproj", "{8D504D33-61C4-4DFD-B480-3D33828FBAEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EchoWeb", "src\v1\EchoWeb.csproj", "{8D504D33-61C4-4DFD-B480-3D33828FBAEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EchoWebV2", "src\v2\EchoWebV2.csproj", "{38DEF51C-A470-448F-A1D3-0CB28E09716E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8D504D33-61C4-4DFD-B480-3D33828FBAEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D504D33-61C4-4DFD-B480-3D33828FBAEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D504D33-61C4-4DFD-B480-3D33828FBAEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38DEF51C-A470-448F-A1D3-0CB28E09716E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38DEF51C-A470-448F-A1D3-0CB28E09716E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38DEF51C-A470-448F-A1D3-0CB28E09716E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38DEF51C-A470-448F-A1D3-0CB28E09716E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

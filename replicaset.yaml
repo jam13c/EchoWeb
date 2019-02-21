@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: echoweb
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: echoweb
+  template:
+    metadata:
+      labels:
+        app: echoweb
+    spec:
+      containers:
+      - name: echoweb
+        image: jam13c/echoweb:1.0
+        ports:
+        - containerPort: 80
+        env:
+        - name: POD_ID
+          valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
