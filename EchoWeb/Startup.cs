@@ -27,7 +27,9 @@ namespace EchoWeb
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                var text = context.Request.Query["text"][0] ?? "Hello World!";
+                var envPodId = Environment.GetEnvironmentVariable("PodId") ?? "Unknown Pod";
+                await context.Response.WriteAsync($"{envPodId} says \"{text}\"");
             });
         }
     }
